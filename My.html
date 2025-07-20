@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammed Ansil | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --accent-color: #002f4b;
+      --header-bg: linear-gradient(to right, #002f4b, #dc4225);
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f4f4f4;
+      --accent-color: #90caf9;
+      --header-bg: linear-gradient(to right, #0f2027, #203a43);
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    header, section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      transition: all 0.4s;
+    }
+
+    header {
+      background: var(--header-bg);
+      color: white;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 5px solid white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--accent-color);
+    }
+
+    section:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+
+    section {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .resume-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #002f4b;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .resume-button:hover {
+      background-color: var(--accent-color);
+    }
+
+    .project {
+      margin-bottom: 20px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+
+    .toggle-dark {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 15px;
+      background-color: var(--accent-color);
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .skill-item {
+      background-color: white;
+      color: #333;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    body.dark .skill-item {
+      background-color: #1e1e1e;
+      color: white;
+      box-shadow: 0 6px 16px rgba(255, 255, 255, 0.05);
+    }
+
+    body.dark .skill-item:hover {
+      box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      header img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-dark" onclick="document.body.classList.toggle('dark')">Dark Mode</button>
+
+  <header>
+    <img src="MEEE.jpg" alt="Muhammed Ansil">
+    <h1>Muhammed Ansil</h1>
+    <p>Final Year B.Tech AI & DS Student | Aspiring AI Engineer, Data Scientist & Software Developer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Final year B.Tech student specializing in Artificial Intelligence and Data Science. Passionate about developing scalable web applications and data-driven AI solutions. Proficient in Java, Python, and modern web technologies.</p>
+  </section>
+
+  <section>
+    <h2>Resume</h2>
+    <a href="Resume_July.pdf" class="resume-button" target="_blank">Download My Resume</a>
+    <iframe src="Resume_July.pdf"></iframe>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>MAN-miniCar Mart</h3>
+      <p>A sleek and responsive online mini car e-commerce website using HTML, CSS, and JavaScript. Features filtering, animated transitions, cart functionality, and a fully scrollable section-based interface.</p>
+      <a href="https://github.com/muhammed-ansil/MAN-mini-car-mart" class="resume-button" target="_blank">Link</a>
+    </div>
+    <div class="project">
+      <h3>AI Text Summarization Tool</h3>
+      <p>Built Text Summarization Tool using Python, TensorFlow, PyTorch, Natural Language Processing (NLP), and NLTK. It can generate summaries of large articles and URLs.</p>
+      <a href="https://github.com/muhammed-ansil/SummerizationAi" class="resume-button" target="_blank">Link</a>
+    </div>
+    <div class="project">
+      <h3>My Personal Profile Card</h3>
+      <p>Built personal profile card using HTML and CSS. It shows name, photo, and other basic details.</p>
+      <a href="https://github.com/muhammed-ansil/My-Personal-Profile-card" class="resume-button" target="_blank">Link</a>
+    </div>
+    <div class="project">
+      <h3>Simple Note Saver</h3>
+      <p>Built simple note saver using JavaScript. It shows as a pop-up and allows adding, viewing, and deleting short notes.</p>
+      <a href="https://github.com/muhammed-ansil/Simple-note-saver" class="resume-button" target="_blank">Link</a>
+    </div>
+    <div class="project">
+      <h3>Children's Corner</h3>
+      <p>UI/UX design using Figma. Children-themed app with Home, Login, and Create Pages including prototype interactions.</p>
+      <a href="https://www.figma.com/proto/6pF9VHUV1zepp8cR7wa2rT?node-id=0-1" class="resume-button" target="_blank">Link</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">Java</div>
+      <div class="skill-item">Python</div>
+      <div class="skill-item">JavaScript</div>
+      <div class="skill-item">HTML</div>
+      <div class="skill-item">CSS</div>
+      <div class="skill-item">MySQL</div>
+      <div class="skill-item">Git</div>
+      <div class="skill-item">VS Code</div>
+      <div class="skill-item">Artificial Intelligence</div>
+      <div class="skill-item">Machine Learning</div>
+      <div class="skill-item">Data Science</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Internships</h2>
+    <ul>
+      <li><strong>Bluestock Fintech (Jan–Feb 2025)</strong> - Software Developer Intern (Remote)</li>
+      <a href="https://drive.google.com/file/d/17BpvSeIwmquYYGIFLGM_2KYdqj1Ze4lD/view" class="resume-button" target="_blank">Certificate</a>
+
+      <li><strong>CODTECH IT SOLUTIONS (Dec 2024–Feb 2025)</strong> - Artificial Intelligence Intern (Remote)</li>
+      <a href="https://drive.google.com/file/d/1-AZQLhDWwf0XvVTJyFf3gWC0_Ao61t8s/view" class="resume-button" target="_blank">Certificate</a>
+
+      <li><strong>Postulate Info Tech Pvt. Ltd. (Aug 2024)</strong> - Data Science Intern (On-site)</li>
+      <a href="https://drive.google.com/file/d/1ZKTpX3sO3fqmTPAxjVf8HClLfCP1T77z/view" class="resume-button" target="_blank">Certificate</a>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p>B.Tech in Artificial Intelligence and Data Science – Anna University</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <p>NPTEL – Machine Learning for Engineering and Science Applications</p>
+    <a href="Machine Learning for Engineering and science applications.pdf" class="resume-button" target="_blank">Download Certificate</a>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <a href="mailto:anzilmarakkarn@gmail.com">anzilmarakkarn@gmail.com</a>
+    <a href="https://www.linkedin.com/in/muhammedansilai" target="_blank">LinkedIn</a>
+    <a href="https://github.com/muhammed-ansil" target="_blank">GitHub</a>
+  </section>
+</body>
+</html>
